@@ -92,7 +92,7 @@
             "<span class='shayari'>'Hazaron baatein chhipi hain in aankhon mein,</span>",
             "<span class='shayari'>Ek baar dekh lun, toh poori duniya bhool jata hoon.'</span>",
             "There is absolutely no pressure on you to say anything back right now.",
-            "I just wanted to be honest, and if you're up for it, I’d love the chance to just get to know you better."
+            "I just wanted to be honest, and if you're up for it, I’d love the chance just to get to know you better."
         ];
         
         const messageContainer = document.getElementById("message");
@@ -123,6 +123,7 @@
         }
 
         function startReveal() {
+            music.volume = 0.5;
             music.play();
             button.style.opacity = '0'; 
             setTimeout(() => button.style.display = 'none', 400); 
@@ -147,3 +148,4 @@
 </body>
 
 </html>
+
