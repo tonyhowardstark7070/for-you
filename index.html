@@ -109,18 +109,6 @@
             });
         }
 
-        function fadeOutMusic() {
-            let volume = 0.5;
-            const interval = setInterval(() => {
-                if (volume > 0.05) {
-                    volume -= 0.05;
-                    music.volume = volume;
-                } else {
-                    music.pause();
-                    clearInterval(interval);
-                }
-            }, 250); // Fades over ~5 seconds
-        }
 
         function startReveal() {
             music.volume = 0.5;
@@ -135,10 +123,7 @@
                     // Scroll container to bottom as new text appears
                     messageContainer.parentElement.scrollTop = messageContainer.parentElement.scrollHeight;
                     
-                    // Start fade out after the last sentence
-                    if (index === sentences.length - 1) {
-                        setTimeout(fadeOutMusic, 8000); // Waits 8 seconds after last line before fading
-                    }
+               
                 }, index * 2000); // 2-second delay per sentence
             });
         }
@@ -148,5 +133,6 @@
 </body>
 
 </html>
+
 
 
